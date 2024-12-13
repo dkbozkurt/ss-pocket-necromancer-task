@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 04e162c9e9f9e45228dea4321ae39f84
+guid: de4059d7213fb462c8fbed14365d5d8d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Necromancer
+    second: {fileID: 2100000, guid: 21f618d2d6744465293a01b5eae64fc5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -98,7 +103,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
