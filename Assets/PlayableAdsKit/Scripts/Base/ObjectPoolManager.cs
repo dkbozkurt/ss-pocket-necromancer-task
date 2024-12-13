@@ -7,9 +7,9 @@ namespace PlayableAdsKit.Scripts.Base
 {
     public enum ObjectName
     {
-        Type1,
-        Type2,
-        Type3
+        Enemy,
+        Ghost,
+        
     }
 
     [Serializable]
