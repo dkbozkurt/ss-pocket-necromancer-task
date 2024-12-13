@@ -25,7 +25,7 @@ namespace PlayableAdsKit.Scripts.PlaygroundConnections
         {
             TutorialTextSetter(true);
             AnimateTutorialText();
-            TutorialHandSetter(true,"Swerve");
+            TutorialHandSetter(true,"Sweve");
         }
         
         
