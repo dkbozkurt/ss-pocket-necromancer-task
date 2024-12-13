@@ -478,8 +478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _openStoreAfterEndCard: 1
-  _showEndCardSecondsAfterLastInput: 5.5
-  _openEndCardAfterTaps: 30
+  _showEndCardSecondsAfterLastInput: 9999
+  _openEndCardAfterTaps: 9999
   _openStoreAfterEndCardCallDelay: 1.5
   _endCardCTAButton: {fileID: 5953010003395795978}
   _shineEffect: {fileID: 3635184920730247008}
