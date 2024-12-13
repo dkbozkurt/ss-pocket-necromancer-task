@@ -28,7 +28,7 @@ namespace Game.Scripts.Managers
 
         private void StartSpawn()
         {
-            SpawnMonsters(5);
+            SpawnMonsters(3);
             _waveSpawnCoroutine = StartCoroutine(WaveCallCoroutine());
         }
         
@@ -50,7 +50,7 @@ namespace Game.Scripts.Managers
         private IEnumerator WaveCallCoroutine()
         {
             yield return new WaitForSeconds(3f);
-            SpawnMonsters(3);
+            SpawnMonsters(2);
             
             _waveSpawnCoroutine = StartCoroutine(WaveCallCoroutine());
         }
