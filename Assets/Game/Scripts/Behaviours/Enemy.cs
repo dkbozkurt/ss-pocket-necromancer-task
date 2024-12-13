@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using Game.Scripts.Managers;
 using PlayableAdsKit.Scripts.Base;
+using PlayableAdsKit.Scripts.Utilities;
 using UnityEngine;
 
 namespace Game.Scripts.Behaviours
@@ -71,7 +72,10 @@ namespace Game.Scripts.Behaviours
         public void ReceiveDamage(float damageAmount)
         {
             _currentHealth -= damageAmount;
-            Debug.Log("Call text with the value of "+ damageAmount);
+            
+            ObjectPoolManager.Instance.GetPooledObject(ObjectName.DamageText, transform.position,
+                Quaternion.identity);
+            
             if (_currentHealth <= 0)
             {
                 Die();

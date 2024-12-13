@@ -9,7 +9,7 @@ namespace PlayableAdsKit.Scripts.Base
     {
         Enemy,
         Ghost,
-        
+        DamageText
     }
 
     [Serializable]

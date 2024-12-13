@@ -1216,10 +1216,13 @@ MonoBehaviour:
   _objectPoolItems:
   - _objectName: 0
     _objectToPool: {fileID: 1098828033089503809, guid: 1f9928aac177b4897ad90a9699cebf0b, type: 3}
-    _amountToPool: 20
+    _amountToPool: 30
   - _objectName: 1
     _objectToPool: {fileID: 8473399826719426182, guid: 7c24e0625765e46dcb8c61a6c73f23a7, type: 3}
     _amountToPool: 3
+  - _objectName: 2
+    _objectToPool: {fileID: 5309625884255722418, guid: b760847df943046458b17d976a5dd18e, type: 3}
+    _amountToPool: 20
 --- !u!4 &784510783
 Transform:
   m_ObjectHideFlags: 0
