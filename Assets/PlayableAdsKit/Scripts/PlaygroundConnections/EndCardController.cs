@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using Game.Scripts.Managers;
 using PlayableAdsKit.Scripts.Helpers;
 using PlayableAdsKit.Scripts.Utilities;
 using UnityEngine;
@@ -88,6 +89,8 @@ namespace PlayableAdsKit.Scripts.PlaygroundConnections
             if(obj!= null) obj.SetActive(false);
             
             if(_isEndCardOpened) return;
+
+            GameManager.Instance.Stop();
             
             _isEndCardOpened = true;
             

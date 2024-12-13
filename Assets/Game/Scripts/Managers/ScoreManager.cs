@@ -42,7 +42,7 @@ namespace Game.Scripts.Managers
                 return;
             }
 			
-            var calculatedIncrementPercentage = 1 / _gameEndEnemyCount;
+            var calculatedIncrementPercentage = 1f / (float)_gameEndEnemyCount;
 
             _killedEnemeyCount++;
             SetKilledEnemyCount();

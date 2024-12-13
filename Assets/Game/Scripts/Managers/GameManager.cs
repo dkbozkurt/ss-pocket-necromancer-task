@@ -9,6 +9,7 @@ namespace Game.Scripts.Managers
     public class GameManager : SingletonBehaviour<GameManager>
     {
         public static event Action OnGameStarted;
+        public static event Action OnGameStop;
         protected override void OnAwake() { }
 
         public bool CanGetInput = true;
@@ -24,6 +25,13 @@ namespace Game.Scripts.Managers
                 IsFirstClickOccured = true;
                 TutorialController.Instance.Deactivate();
             }
+        }
+
+        public void Stop()
+        {
+            OnGameStop?.Invoke();
+            CanGetInput = false;
+
         }
         
     }

@@ -23,12 +23,16 @@ namespace Game.Scripts.Behaviours
             _canMove = true;
             
             SetBoolAnim("Move",true);
+
+            GameManager.OnGameStop += StopMove;
         }
 
         private void OnDisable()
         {
             IsTargetable = false;
             _canMove = false;
+            
+            GameManager.OnGameStop -= StopMove;
         }
 
         private void FixedUpdate()
@@ -49,6 +53,7 @@ namespace Game.Scripts.Behaviours
 
         private void SetRotation()
         {
+            if(!_canMove) return;
             Vector3 direction = GameManager.Instance.PlayerTransform.position - transform.position;
             direction.y = 0f; // Zero out the vertical component to ensure no tilt
 
@@ -89,6 +94,12 @@ namespace Game.Scripts.Behaviours
         private void SetBoolAnim(string name,bool status)
         {
              _animator.SetBool(name,status);
+        }
+
+        private void StopMove()
+        {
+            _canMove = false;
+            SetBoolAnim("Move",false);
         }
     }
 }

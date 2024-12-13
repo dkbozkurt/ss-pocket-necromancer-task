@@ -17,6 +17,7 @@ namespace Game.Scripts.Managers
     
         public void OnDrag(PointerEventData eventData)
         {
+            if(!GameManager.Instance.CanGetInput) return;
             Vector2 joyDirection = eventData.position - _joyPosition;
             _input = (joyDirection.magnitude > JoystickBackground.sizeDelta.x / 2f)
                 ? joyDirection.normalized
@@ -26,6 +27,7 @@ namespace Game.Scripts.Managers
         }
         public void OnPointerDown(PointerEventData eventData)
         {
+            if(!GameManager.Instance.CanGetInput) return;
             JoystickBackground.gameObject.SetActive(true);
             _joyPosition = eventData.position;
             OnDrag(eventData);

@@ -17,11 +17,13 @@ namespace Game.Scripts.Managers
         private void OnEnable()
         {
             GameManager.OnGameStarted += StartSpawn;
+            GameManager.OnGameStop += GameStop;
         }
 
         private void OnDisable()
         {
             GameManager.OnGameStarted -= StartSpawn;
+            GameManager.OnGameStop -= GameStop;
         }
 
         private void StartSpawn()
@@ -47,7 +49,7 @@ namespace Game.Scripts.Managers
         
         private IEnumerator WaveCallCoroutine()
         {
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(3f);
             SpawnMonsters(3);
             
             _waveSpawnCoroutine = StartCoroutine(WaveCallCoroutine());

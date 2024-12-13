@@ -13,14 +13,17 @@ namespace Game.Scripts.Controllers
 
         private int _ghostsLevel = 1;
 
+        private Tween _rotationTween;
         private void OnEnable()
         {
             ScoreManager.OnUpgradeAchieved += Upgrade;
+            GameManager.OnGameStop += StopRotation;
         }
 
         private void OnDisable()
         {
             ScoreManager.OnUpgradeAchieved -= Upgrade;
+            GameManager.OnGameStop -= StopRotation;
         }
 
         void Start()
@@ -30,8 +33,13 @@ namespace Game.Scripts.Controllers
 
         private void AnimateRotation()
         {
-            transform.DOLocalRotate(Vector3.up * 360, 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart)
+            _rotationTween= transform.DOLocalRotate(Vector3.up * 360, 2f, RotateMode.FastBeyond360).SetLoops(-1, LoopType.Restart)
                 .SetEase(Ease.Linear);
+        }
+
+        private void StopRotation()
+        {
+            _rotationTween?.Kill();   
         }
 
         private void Upgrade()
