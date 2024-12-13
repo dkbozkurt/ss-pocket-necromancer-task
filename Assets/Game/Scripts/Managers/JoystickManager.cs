@@ -27,6 +27,7 @@ namespace Game.Scripts.Managers
         public void OnPointerDown(PointerEventData eventData)
         {
             JoystickBackground.gameObject.SetActive(true);
+            _joyPosition = eventData.position;
             OnDrag(eventData);
             _joyPosition = eventData.position;
             JoystickBackground.position = eventData.position;

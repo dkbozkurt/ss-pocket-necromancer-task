@@ -56,7 +56,7 @@ namespace Game.Scripts.Controllers
 
         private void SetBoolAnim(string name,bool status)
         {
-            // _playerAnimator.SetBool(name,status);
+             _playerAnimator.SetBool(name,status);
         }
     }
 }

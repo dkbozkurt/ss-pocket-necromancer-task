@@ -3,7 +3,22 @@ guid: 3fbd8c56f22e4409699c982c7aa888e4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Necromancer
+    second: {fileID: 2100000, guid: 21f618d2d6744465293a01b5eae64fc5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Necromancer_Eyes
+    second: {fileID: 2100000, guid: 91f2a21e57bde423d8263a387ebf7fb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_Necromancer_Scythe
+    second: {fileID: 2100000, guid: b1f2456a999a74da88ce423f5bd470e0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -36,7 +51,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 2
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
@@ -98,7 +113,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
